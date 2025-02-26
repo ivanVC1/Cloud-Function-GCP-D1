@@ -32,11 +32,21 @@ python -m unittest test_main.py
 
 
 ## Diagrama de flujo
-graph TD;
-  A[Subida de archivo a Cloud Storage] --> B[Cloud Function activada];
-  B --> C[Extraer metadatos];
-  C --> D[Registrar en Cloud Logging];
-  D --> E[Respuesta exitosa];
+
+---
+
+## **🔹 Explicación del Diagrama**
+1️⃣ **Un usuario sube un archivo** a **Cloud Storage**.  
+2️⃣ **Se genera un evento** en **Google Cloud Storage**, activando la **Cloud Function**.  
+3️⃣ **La Cloud Function extrae los metadatos** del archivo:  
+   - 📌 **Nombre**  
+   - 📌 **Tamaño**  
+   - 📌 **Tipo de contenido**  
+4️⃣ **Los metadatos se registran en Cloud Logging**.  
+5️⃣ **La función responde con un mensaje de éxito**.  
+
+---
+
 
 ## 📌 Explicación:
 
